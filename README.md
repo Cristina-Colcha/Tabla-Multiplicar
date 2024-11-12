@@ -1,104 +1,68 @@
-# SumarNumerosApp
+## TABLAMULTIPLICARCRISTINA## 
 
-Este es un proyecto de ejemplo en C# usando **ASP.NET Core MVC** que permite sumar dos números a través de una interfaz web. El proyecto permite al usuario ingresar dos números en un formulario, realizar la suma y mostrar el resultado.
+    Este proyecto permite generar la tabla de multiplicar para un número dado, multiplicando del 1 al 12. Este proyecto está diseñado como una aplicación Spring Boot y contiene los controladores y configuraciones necesarias para gestionar las solicitudes de generación de tablas.
 
-## Estructura del Proyecto
+## Estructura del Proyecto## 
 
-El proyecto tiene la siguiente estructura:
+    TABLAMULTIPLICAR/
+    ├── .mvn/                       # Configuraciones de Maven 
+    ├── src/
+    │   ├── main/
+    │   │   ├── java/com/multiplicar/tabla_multiplicar/
+    │   │   │   ├── MultiplicacionTablaController.java    # Controlador principal para la tabla de multiplicar
+    │   │   │   ├── ServletInitializer.java               # Configuración del servlet para inicializar Spring Boot
+    │   │   │   └── TablaMultiplicarApplication.java      # Clase principal que inicia la aplicación Spring Boot
+    │   │   └── resources/                                # Directorio para archivos de recursos
+    │   └── test/                                         # Directorio para pruebas
+    ├── target/                                           # Archivos generados después de la compilación
+    ├── .gitignore                                        # Archivos y carpetas a ignorar por Git
+    ├── dockerfile                                        # Archivo Docker para construir la imagen de la aplicación
+    ├── pom.xml                                           # Archivo de configuración de Maven
+    └── README.md                                         # Documentación del proyecto
 
-SumarNumerosApp/ ├── Controllers/ │ └── SumaController.cs # Controlador que maneja las solicitudes y respuestas ├── Models/ │ └── SumaModel.cs # Modelo que representa los datos de entrada y salida ├── Views/ │ └── Suma/ │ └── Index.cshtml # Vista que contiene el formulario para la entrada de datos y el resultado ├── appsettings.json # Archivo de configuración ├── Program.cs # Punto de entrada de la aplicación └── SumarNumerosApp.csproj # Archivo del proyecto .NET
+## Requisitos ##
+    Java 8 o superior
+    Spring Boot
+    Maven
+## Instalación
+1. Clona este repositorio:
+   git clone 
+2. Navega al directorio del proyecto:
 
-markdown
-Copiar código
+   cd TABLAMULTIPLICAR
+3. Construye el proyecto con Maven:
 
-## Requisitos
+   mvn clean install
+## Ejecuta la aplicación:
 
-Para ejecutar este proyecto en tu máquina local, necesitas tener instalados los siguientes requisitos:
+   mvn spring-boot:run
+## Uso
+Una vez que la aplicación esté en ejecución, acceda al endpoint para generar la tabla de multiplicar.
 
-1. **.NET SDK**: Asegúrate de tener instalado el SDK de .NET. Puedes descargarlo desde [aquí](https://dotnet.microsoft.com/download/dotnet).
-2. **Editor de Código**: Se recomienda usar **Visual Studio Code** o **Visual Studio**.
+   Endpoint
+   URL: http://localhost:8080/table/{number}
+   Método HTTP: GET
+## Parámetro:
+   number: Número entero para el cual se generará la tabla de multiplicar.
+   Ejemplo
+   Si deseas obtener la tabla de multiplicar del número 5, realiza una solicitud GET a:
+   
+   http://localhost:8080/table/5
 
-## Clonación del Proyecto
+## Contribuciones
+   Si deseas contribuir a este proyecto, siéntete libre de hacer un fork y enviar tus cambios mediante un pull request.
 
-Para clonar este proyecto y ejecutarlo en tu máquina local, sigue los siguientes pasos:
+## Licencia
+   Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para obtener más detalles.
+   Autor
+   Cristina Colcha
 
-1. Abre una terminal (símbolo del sistema o terminal de VS Code).
-2. Ejecuta el siguiente comando para clonar el repositorio:
+   Esta estructura es visualmente más agradable y utiliza un formato de árbol para mostrar la organización de los archivos en el proyecto. ¡Espero que te guste!
 
-   ```bash
-   git clone <URL_DEL_REPOSITORIO>
-Reemplaza <URL_DEL_REPOSITORIO> con la URL del repositorio (por ejemplo, https://github.com/usuario/SumarNumerosApp.git).
 
-Ingresa en la carpeta del proyecto:
 
-bash
-Copiar código
-cd SumarNumerosApp
-Ejecución del Proyecto
-Una vez que hayas clonado el proyecto, sigue estos pasos para ejecutarlo:
 
-Abre una terminal en la carpeta del proyecto.
 
-Ejecuta el siguiente comando para restaurar las dependencias necesarias y compilar el proyecto:
-
-bash
-Copiar código
-dotnet restore
-Luego, ejecuta el siguiente comando para iniciar la aplicación:
-
-bash
-Copiar código
-dotnet run
-Abre un navegador web y visita la siguiente URL:
-
-arduino
-Copiar código
-http://localhost:5000/Suma
-En esta página verás el formulario para ingresar dos números. Al enviar el formulario, se mostrará el resultado de la suma.
-
-Explicación del Proyecto
-Controlador: SumaController.cs
-El controlador maneja las solicitudes HTTP. Tiene dos acciones:
-
-Index: Muestra el formulario para ingresar los dos números.
-Sumar: Recibe los números del formulario, los suma y devuelve el resultado.
-Modelo: SumaModel.cs
-Este modelo contiene tres propiedades:
-
-Numero1: El primer número que el usuario ingresa.
-Numero2: El segundo número que el usuario ingresa.
-Resultado: El resultado de la suma.
-Vista: Index.cshtml
-Esta vista contiene el formulario HTML que permite al usuario ingresar los dos números. También muestra el resultado de la suma si se ha realizado correctamente.
-
-Contribución
-Si deseas contribuir a este proyecto, sigue estos pasos:
-
-Haz un fork de este repositorio.
-Crea una nueva rama para tu contribución (git checkout -b feature-nueva-caracteristica).
-Realiza tus cambios y haz un commit (git commit -am 'Añadir nueva característica').
-Empuja tu rama (git push origin feature-nueva-caracteristica).
-Abre un pull request explicando los cambios.
-Licencia
-Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo LICENSE en el repositorio.
-
-Contacto
-Si tienes alguna pregunta, no dudes en ponerte en contacto conmigo:
-
-Correo electrónico: [tuemail@dominio.com]
-GitHub: https://github.com/usuario
-markdown
-Copiar código
-
-### Instrucciones en el README:
-
-1. **Estructura del Proyecto**: Explica cómo está organizado el proyecto, lo que facilita a otros desarrolladores entender rápidamente dónde están los archivos clave.
-2. **Requisitos**: Incluye las herramientas necesarias (como .NET SDK).
-3. **Clonación del Proyecto**: Paso a paso para clonar y abrir el proyecto.
-4. **Ejecución del Proyecto**: Instrucciones claras sobre cómo restaurar dependencias y ejecutar el proyecto en un entorno local.
-5. **Explicación del Proyecto**: Descripción básica del controlador, modelo y vista, lo que ayuda a entender la lógica detrás de la aplicación.
-
-Este `README.md` debe ser un buen punto de partida para documentar tu proyecto. Si necesitas agregar más detalles, siéntete libre de hacerlo.
 
 
 
