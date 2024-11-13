@@ -46,7 +46,7 @@ Once the application is running, access the endpoint to generate the multiplicat
 ## Using the Docker image from Docker Hub
    If you want to use the Docker Hub image:
 
-   Download image from Docker Hub:
+* Download image from Docker Hub:
    The container is configured to run on port 8080 you can use the image with the following message
 
    docker pull cristinacolcha/tabla-multiplicar:latest
