@@ -43,8 +43,14 @@ Once the application is running, access the endpoint to generate the multiplicat
    http://localhost:8080/table/5
 ## Contributions
    If you wish to contribute to this project, feel free to make a fork and submit your changes via a pull request.
-## Author
-   Cristina Colcha
+## Using the Docker image from Docker Hub
+   If you want to use the Docker Hub image:
+
+   Download image from Docker Hub:
+   The container is configured to run on port 8080 you can use the image with the following message
+
+   docker pull cristinacolcha/tabla-multiplicar:latest
+   
    This structure is visually nicer and uses a tree format to show the organization of the files in the project. hope you like it!
 
 
