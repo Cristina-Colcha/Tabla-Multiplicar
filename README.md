@@ -1,7 +1,7 @@
  
-## TABLAMULTIPLICARCRISTINA###. 
+## TABLAMULTIPLICAR###. 
     This project allows to generate the multiplication table for a given number, multiplying from 1 to 12. This project is designed as a Spring Boot application and contains the necessary drivers and configurations to handle the table generation requests.
-## Project Structure 
+## Project Structures
     TABLAMULTIPLY/
     ├── .mvn/ # # Maven configurations. 
     ├─── src/
@@ -46,13 +46,6 @@ Once the application is running, access the endpoint to generate the multiplicat
 ## Author
    Cristina Colcha
    This structure is visually nicer and uses a tree format to show the organization of the files in the project. hope you like it!
-
-
-
-
-
-
-
 
 
 
